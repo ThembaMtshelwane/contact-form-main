@@ -21,16 +21,18 @@
 body {
   font-size: 16px;
   font-family: 'Karla', sans-serif;
+  background-color: var(--green-200);
+  color: var(--grey-900);
 }
 
 main {
-  border: 2px solid red;
   width: 90%;
   margin: 30px auto;
   border-radius: 15px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
 }
 
 h1 {
@@ -38,67 +40,89 @@ h1 {
   font-weight: 700;
 }
 
-.nameContainer,
+.firstNameContainer,
+.LastNameContainer {
+  /* border: 5px solid blue; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
 .queryTypeContainer,
 .emailContainer,
 .messageContainer,
 .buttonContainer {
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.firstNameContainer,
-.LastNameContainer {
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 label {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.option {
+  margin-bottom: 0px;
+  padding: 5px;
 }
 
 input,
 textarea {
-  padding: 10px;
-  border: 1px solid;
+  font-size: 1.2rem;
+  padding: 15px;
   border-radius: 5px;
+  border: 1px solid var(--grey-900);
 }
 
 .queryTypes {
-  border: 1px solid;
   display: flex;
   flex-direction: column;
 }
 
 .generalEnquiryContainer,
 .supportRequestContainer {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.radio-input {
+  margin-left: 15px;
 }
 
 .radio-input,
 .checkbox-input {
   margin-right: 15px;
+  width: 20px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .consentContainer {
-  border: 5px solid blue;
-  margin-bottom: 10px;
+  /* border: 5px solid blue; */
+  margin: 30px 0px;
   display: flex;
+}
+.consent {
+  margin-bottom: 0px;
+  line-height: 1.5rem;
+  padding-right: 30px;
 }
 
 button {
-  height: 50px;
+  height: 60px;
   width: 100%;
   border-radius: 5px;
   border: none;
   letter-spacing: 0.2rem;
+  color: var(--white);
+  font-weight: 700;
+  background-color: var(--green-600);
+  margin-bottom: 10px;
 }
 
 .attribution {
