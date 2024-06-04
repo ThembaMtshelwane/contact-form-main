@@ -1,3 +1,106 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Primary */
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+
+main {
+  border: 2px solid red;
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.nameContainer,
+.queryTypeContainer,
+.emailContainer,
+.messageContainer,
+.buttonContainer {
+  border: 5px solid blue;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.firstNameContainer,
+.LastNameContainer {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.queryTypes {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.generalEnquiryContainer,
+.supportRequestContainer {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.radio-input,
+.checkbox-input {
+  margin-right: 15px;
+}
+
+.consentContainer {
+  border: 5px solid blue;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  letter-spacing: 0.2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
