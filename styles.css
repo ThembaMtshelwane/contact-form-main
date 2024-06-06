@@ -42,7 +42,6 @@ h1 {
 
 .firstNameContainer,
 .LastNameContainer {
-  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -52,7 +51,6 @@ h1 {
 .emailContainer,
 .messageContainer,
 .buttonContainer {
-  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -69,10 +67,17 @@ label {
 
 input,
 textarea {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--grey-900);
   padding: 15px;
   border-radius: 5px;
   border: 1px solid var(--grey-900);
+}
+
+input:hover,
+textarea:hover {
+  border: 2px solid var(--green-600);
+  cursor: pointer;
 }
 
 .queryTypes {
@@ -90,8 +95,17 @@ textarea {
   align-items: center;
 }
 
+.generalEnquiryContainer:hover,
+.supportRequestContainer:hover {
+  border: 2px solid var(--green-600);
+  background-color: var(--green-200);
+  cursor: pointer;
+}
+
 .radio-input {
   margin-left: 15px;
+  border: 2px solid var(--green-600);
+  background-color: var(--green-200);
 }
 
 .radio-input,
@@ -102,8 +116,12 @@ textarea {
   cursor: pointer;
 }
 
+.radio-input {
+  border: 2px solid var(--green-600);
+  background-color: var(--green-200);
+}
+
 .consentContainer {
-  /* border: 5px solid blue; */
   margin: 30px 0px;
   display: flex;
   align-items: center;
@@ -113,6 +131,7 @@ textarea {
   margin-bottom: 0px;
   line-height: 1.5rem;
   padding-right: 30px;
+  cursor: pointer;
 }
 
 button {
@@ -125,6 +144,11 @@ button {
   font-weight: 700;
   background-color: var(--green-600);
   margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: hsl(169, 84%, 17%);
+  transform: scale(1.01);
   cursor: pointer;
 }
 
@@ -159,7 +183,6 @@ button {
 
   .nameContainer,
   .queryTypes {
-    /* border: 5px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
