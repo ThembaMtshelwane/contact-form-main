@@ -27,7 +27,7 @@ body {
 
 main {
   width: 90%;
-  margin: 30px auto;
+  margin: 70px auto;
   border-radius: 15px;
   padding: 20px;
   display: flex;
@@ -202,8 +202,8 @@ button:hover {
 
 @media screen and (min-width: 570px) {
   main {
-    width: 80%;
-    max-width: 650px;
+    width: 90%;
+    max-width: 750px;
     padding: 40px;
   }
 
