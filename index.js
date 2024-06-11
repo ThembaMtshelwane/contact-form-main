@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       emailAddress: '',
       queryType: '',
       message: '',
-      consent: '',
+      consent: ''
     }
 
     // First Name validation
@@ -99,13 +99,19 @@ document.addEventListener('DOMContentLoaded', () => {
       consentError.textContent = ''
     }
 
+    const successMessageContainer = document.getElementById(
+      'successMessageContainer'
+    )
     if (!formIsValid) {
       console.log('ERROR')
       e.preventDefault()
     } else {
-      console.log('data', data)
-      alert('Form submitted successfully!')
+      e.preventDefault()
+      successMessageContainer.style.display = 'block'
       form.reset()
+      setTimeout(() => {
+        successMessageContainer.style.display = 'none'
+      }, 3000)
     }
   })
 })
