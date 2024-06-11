@@ -2,7 +2,7 @@
 
 ![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)
 
-Welcome! 👋 [This is my attempt](https://contact-form-main-pied.vercel.app/) (In Progress)  completing the Frontend Mentor challenge.
+Welcome! 👋 [This is my attempt](https://contact-form-main-pied.vercel.app/) completing the Frontend Mentor challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
