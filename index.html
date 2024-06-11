@@ -14,25 +14,29 @@
       href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js" defer></script>
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
     <main>
       <h1>Contact Us</h1>
-      <form action="">
+      <form id="contactForm" action="">
         <section class="nameContainer">
           <section class="firstNameContainer">
             <label for="firstname"> First Name *</label>
-            <input id="firstname" type="text" required />
+            <input id="firstname" type="text" />
+            <span class="error" id="firstnameError"></span>
           </section>
           <section class="LastNameContainer">
             <label for="lastname"> Last Name *</label>
-            <input id="lastname" type="text" required />
+            <input id="lastname" type="text" />
+            <span class="error" id="lastnameError"></span>
           </section>
         </section>
         <section class="emailContainer">
           <label for="email">Email Address *</label>
-          <input id="email" type="email" required />
+          <input id="email" type="text" />
+          <span class="error" id="emailError"></span>
         </section>
         <section class="queryTypeContainer">
           <label for="query">Query Type *</label>
@@ -44,7 +48,7 @@
                 class="radio-input"
                 name="option"
               />
-               <span class="custom-radio"></span>
+              <span class="custom-radio"></span>
               <label class="option" for="general">General Enquiry</label>
             </section>
             <section class="supportRequestContainer">
@@ -57,16 +61,21 @@
               <label class="option" for="support">Support Request</label>
             </section>
           </section>
+          <span class="error" id="queryError"></span>
         </section>
         <section class="messageContainer">
           <label for="message">Message *</label>
           <textarea name="message" id="message" rows="10" cols="35"></textarea>
+          <span class="error" id="messageError"></span>
         </section>
-        <section class="consentContainer">
-          <input type="checkbox" id="consent" class="checkbox-input" />
-          <label for="consent" class="consent"
-            >I consent to being contacted by the team *</label
-          >
+        <section class="consentErrorContainer">
+          <section class="consentContainer">
+            <input type="checkbox" id="consent" class="checkbox-input" />
+            <label for="consent" class="consent"
+              >I consent to being contacted by the team *</label
+            >
+          </section>
+          <span class="error" id="consentError"></span>
         </section>
 
         <button>Submit</button>
