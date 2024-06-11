@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+  const form = document.getElementById('contactForm')
+  form.addEventListener('submit', (e) => {
     let formIsValid = true
+    const data = {
+      firstName: '',
+      lastName: '',
+      emailAddress: '',
+      queryType: '',
+      message: '',
+      consent: '',
+    }
 
     // First Name validation
     const firstName = document.getElementById('firstname')
@@ -10,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       firstName.classList.add('errorBorder')
       formIsValid = false
     } else {
+      data.firstName = firstName.value.trim()
       firstNameError.textContent = ''
       firstName.classList.remove('errorBorder')
     }
@@ -22,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lastName.classList.add('errorBorder')
       formIsValid = false
     } else {
+      data.lastName = lastName.value.trim()
       lastNameError.textContent = ''
       lastName.classList.remove('errorBorder')
     }
@@ -40,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       email.classList.add('errorBorder')
       formIsValid = false
     } else {
+      data.emailAddress = email.value.trim()
       emailError.textContent = ''
       email.classList.remove('errorBorder')
     }
@@ -50,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let querySelected = false
     for (const option of queryType) {
       if (option.checked) {
+        data.queryType = option.value.trim()
         querySelected = true
         break
       }
@@ -69,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message.classList.add('errorBorder')
       formIsValid = false
     } else {
+      data.message = message.value.trim()
       messageError.textContent = ''
       message.classList.remove('errorBorder')
     }
@@ -81,11 +95,17 @@ document.addEventListener('DOMContentLoaded', () => {
         'To submit this form, please consent to being contacted'
       formIsValid = false
     } else {
+      data.consent = true
       consentError.textContent = ''
     }
 
     if (!formIsValid) {
+      console.log('ERROR')
       e.preventDefault()
+    } else {
+      console.log('data', data)
+      alert('Form submitted successfully!')
+      form.reset()
     }
   })
 })
